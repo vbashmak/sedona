@@ -1,6 +1,6 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Андрей Ковалев](https://up.htmlacademy.ru/adaptive/16/user/329043).
+* Студент: [Виталий Башмак]
 * Наставник: [Альбина Токарчук](https://htmlacademy.ru/profile/id167491).
 
 ---
