@@ -1,0 +1,55 @@
+.button {
+  color: $color-white;
+  text-decoration: none;
+  background-color: $color-blue;
+  font-size: 21px;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  display: block;
+  width: 280px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &--smaller {
+    width: 180px;
+  }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
+  &:active > .button__text {
+    opacity: 0.3;
+  }
+
+  &:disabled > .button__text {
+    color: $color-white;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button__text {
+    padding-right: 4px;
+
+    &--form {
+      padding-right: 11px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button__text {
+    padding-right: 0;
+  }
+}

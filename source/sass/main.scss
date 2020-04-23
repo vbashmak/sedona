@@ -1,0 +1,15 @@
+.main__map {
+  margin-top: 50px;
+}
+
+@media (min-width: $tablet-width) {
+  .main__map {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__map {
+    margin-top: 67px;
+  }
+}

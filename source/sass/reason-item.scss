@@ -1,0 +1,134 @@
+.reason-item {
+  background-color: $color-blue;
+  color: $color-white;
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+
+  &--triangle {
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 50% top;
+  }
+}
+
+.reason-item__wrapper {
+  margin: 0 auto;
+}
+
+.reason-item__header {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  padding-top: 39px;
+  margin: 0;
+
+  &--triangle {
+    padding-top: 77px;
+  }
+}
+
+.reason-item__text {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 6px;
+
+  &:last-child {
+    padding-bottom: 40px;
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.reason-item__image {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .reason-item {
+    display: flex;
+    width: 768px;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--triangle {
+      background-image: none;
+    }
+  }
+
+  .reason-item__header {
+    font-size: 21px;
+    padding-top: 44px;
+    width: 151px;
+    margin: 0 auto;
+  }
+
+  .reason-item__image {
+    width: 512px;
+  }
+
+  .reason-item__wrapper {
+    margin: 0 auto;
+    width: 256px;
+  }
+
+  .reason-item__text {
+    &:last-child {
+      padding-top: 17px;
+      width: 170px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reason-item {
+    width: $desktop-width;
+    height: 256px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .reason-item__image {
+    width: 800px;
+    position: absolute;
+    top: -71px;
+    left: 400px;
+
+    &--reverse {
+      left: 0;
+      top: -74px;
+    }
+  }
+
+  .reason-item__wrapper {
+    width: 400px;
+    margin-left: 0;
+
+    &--reverse {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .reason-item__header {
+    padding-top: 51px;
+  }
+
+  .reason-item__text {
+    margin: 0 auto;
+
+    &:last-child {
+      padding-top: 17px;
+      width: 265px;
+    }
+
+    &--reverse:last-child {
+      width: 220px;
+    }
+  }
+}

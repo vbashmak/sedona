@@ -1,0 +1,60 @@
+.social__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  width: 151px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.social__item {
+  background-color: $color-blue;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__link {
+  width: 46px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__link .social__icon {
+  &:active {
+    opacity: 0.3;
+  }
+}

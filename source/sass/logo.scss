@@ -1,0 +1,23 @@
+.logo {
+  text-align: center;
+  height: 56px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    position: absolute;
+    width: 102px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 200px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,69 @@
+.radio {
+  display: none;
+}
+
+.radio__text {
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  padding-left: 78px;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 11px;
+    left: 0;
+    border-radius: 50%;
+    border: 18px solid $color-grey;
+    background-color: $color-grey;
+    margin-right: 14px;
+  }
+
+  &:hover::before {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:active::before {
+    border-color: #d5d5d5;
+    background-color: #d5d5d5;
+  }
+}
+
+.radio:checked + .radio__text::before {
+  background-color: #333333;
+}
+
+.radio:checked:active + .radio__text:active::before {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__text {
+    padding-top: 24px;
+    padding-bottom: 28px;
+    padding-left: 75px;
+
+    &::before {
+      top: 9px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .radio__text {
+    padding-left: 78px;
+    padding-top: 24px;
+    padding-bottom: 29px;
+
+    &::before {
+      top: 11px;
+      left: 3px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@media (min-width: $tablet-width) {
+  .feedback__description {
+    margin-top: 74px;
+  }
+
+  .feedback__profile {
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__profile {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,59 @@
+.main-menu {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.main-menu__toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 17px;
+  right: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--nojs {
+    display: none;
+  }
+
+  &--closed {
+    background-image: url("../img/icon-menu.svg");
+  }
+
+  &--opened {
+    background-image: url("../img/icon-cross.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-menu {
+    width: $tablet-width;
+  }
+
+  .main-menu__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-menu {
+    width: $desktop-width;
+  }
+}

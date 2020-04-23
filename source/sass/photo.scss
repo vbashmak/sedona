@@ -1,0 +1,15 @@
+@media (min-width: $tablet-width) {
+  .photo__description {
+    margin-top: 73px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__description {
+    margin-top: 50px;
+
+    &--photo {
+      margin-top: 112px;
+    }
+  }
+}

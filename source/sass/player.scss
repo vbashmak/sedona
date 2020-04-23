@@ -1,0 +1,215 @@
+.player {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  padding-top: 201px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 201px;
+  background-color: #a88c80;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+
+  .player__controls {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 66px;
+  }
+
+  .player__control-replay {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 25px;
+    fill: #5e6870;
+
+    &:hover {
+      fill: #333333;
+    }
+
+    &:active {
+      fill: #b8b8b8;
+    }
+  }
+
+  .player__control-progress {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 156px;
+    left: 20px;
+    padding-top: 15px;
+    padding-right: 155px;
+    padding-left: 58px;
+    width: 280px;
+    height: 45px;
+    fill: $color-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 36px;
+      background-color: rgba(255, 255, 255, 0.2);
+      top: 23px;
+      left: 23px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 189px;
+      background-color: rgba(255, 255, 255, 0.2);
+      top: 23px;
+      left: 68px;
+    }
+  }
+
+  .player__control-subtitles {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 133px;
+    fill: #5c6870;
+
+    &:hover {
+      fill: #333333;
+    }
+
+    &:active {
+      fill: #b8b8b8;
+    }
+  }
+
+  .player__control-fullscreen {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 31px;
+    fill: #5c6870;
+
+    &:hover {
+      fill: #333333;
+    }
+
+    &:active {
+      fill: #b8b8b8;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .player {
+    width: 648px;
+    margin: 0 auto;
+    min-height: 500px;
+    padding-top: 407px;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+
+    .player__controls {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 93px;
+    }
+
+    .player__control-replay {
+      margin-top: 36px;
+      margin-left: 35px;
+      fill: $color-white;
+
+      &:hover {
+        fill: #c2c2c2;
+      }
+
+      &:active {
+        fill: #949494;
+      }
+    }
+
+    .player__control-progress {
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      width: 0;
+      height: 0;
+      padding-top: 37px;
+      padding-right: 0;
+      padding-left: 155px;
+
+      &::before {
+        width: 113px;
+        top: 46px;
+        left: 42px;
+      }
+
+      &::after {
+        width: 267px;
+        top: 46px;
+        left: 165px;
+      }
+    }
+
+    .player__control-subtitles {
+      margin-top: 36px;
+      margin-left: 318px;
+      fill: $color-white;
+
+      &:hover {
+        fill: #c2c2c2;
+      }
+
+      &:active {
+        fill: #949494;
+      }
+    }
+
+    .player__control-fullscreen {
+      margin-top: 36px;
+      margin-left: 31px;
+      fill: $color-white;
+
+      &:hover {
+        fill: #c2c2c2;
+      }
+
+      &:active {
+        fill: #949494;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .player {
+    width: 800px;
+    margin: 0 auto;
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+
+    .player__control-subtitles {
+      margin-left: 470px;
+    }
+
+    .player__control-progress::after {
+      width: 418px;
+    }
+  }
+}

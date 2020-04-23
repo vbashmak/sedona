@@ -1,0 +1,142 @@
+.enumeration {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  width: 320px;
+  padding-top: 29px;
+  margin: 0 auto;
+}
+
+.enumeration__skip {
+  display: none;
+}
+
+.enumeration__item {
+  position: relative;
+  padding-left: 70px;
+  padding-right: 42px;
+
+  &:last-child {
+    padding-bottom: 8px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 40px;
+    top: -11px;
+    left: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--housing::before {
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &--souvenir::before {
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
+  }
+}
+
+.enumeration__header {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: $color-black;
+  position: relative;
+  margin-top: 5px;
+}
+
+.enumeration__text {
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  margin-bottom: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .enumeration {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 676px;
+    margin: 0 auto;
+    padding-top: 18px;
+  }
+
+  .enumeration__header {
+    font-size: 21px;
+    margin-bottom: 22px;
+  }
+
+  .enumeration__item {
+    width: 165px;
+    padding: 0;
+    padding-top: 135px;
+
+    &--souvenir {
+      order: 1;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      width: 157px;
+
+      &::before {
+        left: 39px;
+        top: 41px;
+      }
+    }
+
+    &::before {
+      width: 77px;
+      height: 75px;
+      top: 39px;
+      left: 43px;
+    }
+  }
+
+  .enumeration__text {
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .enumeration {
+    width: 1085px;
+    padding-top: 16px;
+  }
+
+  .enumeration__item {
+    width: 283px;
+    padding-top: 136px;
+
+    &::before {
+      left: 102px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      width: 300px;
+
+      &::before {
+        left: 110px;
+      }
+    }
+  }
+
+  .enumeration__text {
+    margin-bottom: 84px;
+  }
+
+  .enumeration__skip {
+    display: block;
+  }
+}

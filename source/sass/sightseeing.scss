@@ -1,0 +1,28 @@
+.profile__title--sightseeing {
+  font-weight: bold;
+  padding-top: 26px;
+  align-items: center;
+  text-transform: none;
+  font-size: 18px;
+  width: 220px;
+
+  &::before {
+    content: "";
+    width: 56px;
+    height: 56px;
+    border-radius: 5px;
+    background-color: $color-grey;
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .profile__wrapper--sightseeing {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profile__caption--sightseeing {
+    width: 278px;
+  }
+}
